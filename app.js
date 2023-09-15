@@ -19,6 +19,13 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.json(
+    "Welcome to the Python Disease Backend. Hope! You will enjoy using the service."
+  );
+  res.end();
+});
+
 app.use("/api", router);
 app.use("/api/users", usersRoutes);
 
